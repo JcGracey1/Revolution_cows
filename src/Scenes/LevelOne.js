@@ -120,7 +120,7 @@ class LevelOne extends Phaser.Scene {
                 this.updateScore();
                 this.time.delayedCall(2000, () => {
                     this.scene.stop();
-                    this.scene.start("levelTwoScene");  // Assuming you want to restart or reset 'levelTwoScene'
+                    this.scene.get("levelTwoScene").resetGame();  // Assuming you want to restart or reset 'levelTwoScene'
                 }, [], this);
             }
         });
